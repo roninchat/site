@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ronin — Native intelligence for Linux</title>
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #f6f4fa;
+      --card-bg:     #ffffff;
+      --text:        #2c2a38;
+      --text-dim:    #7d7a8a;
+      --accent:      #4147d5;
+      --accent-soft: #d7e0ff;
+      --green:       #5b8c5a;
+      --green-soft:  #dcecdb;
+      --border:      #eceaf2;
+      --shadow:      0 1px 3px rgba(65,71,213,0.04), 0 2px 12px rgba(65,71,213,0.03);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---- Hero ---- */
+    header {
+      padding: 6rem 1.5rem 3rem;
+      text-align: center;
+    }
+
+    .wordmark {
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      line-height: 1.1;
+    }
+
+    .wordmark-accent {
+      color: var(--accent);
+    }
+
+    .tagline {
+      margin-top: 0.75rem;
+      font-size: 1.15rem;
+      color: var(--text-dim);
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-line {
+      width: 48px;
+      height: 2px;
+      background: var(--accent-soft);
+      margin: 2rem auto 0;
+      border-radius: 2px;
+    }
+
+    /* ---- Main ---- */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+
+    /* ---- Feature cards ---- */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 1.25rem;
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 2px 8px rgba(65,71,213,0.06), 0 4px 24px rgba(65,71,213,0.04);
+      border-color: var(--accent-soft);
+    }
+
+    .card iconify-icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      line-height: 1.55;
+    }
+
+    /* ---- Tech stack pills ---- */
+    .section-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--text-dim);
+      margin-bottom: 0.85rem;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .pill.green {
+      background: var(--green-soft);
+      color: var(--green);
+    }
+
+    /* ---- Links ---- */
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: background 0.15s ease;
+    }
+
+    .links a:hover {
+      background: var(--accent-soft);
+    }
+
+    .links iconify-icon {
+      font-size: 1.15rem;
+    }
+
+    /* ---- Footer ---- */
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 540px) {
+      .grid { grid-template-columns: 1fr; }
+      .wordmark { font-size: 2.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 class="wordmark">Ron<span class="wordmark-accent">in</span></h1>
+  <p class="tagline">Native intelligence for Linux</p>
+  <div class="hero-line"></div>
+</header>
+
+<main>
+
+  <div class="grid">
+    <div class="card">
+      <iconify-icon icon="streamline-flex-color:discussion-converstion-reply"></iconify-icon>
+      <h3>Threaded AI Chat</h3>
+      <p>Organise conversations in persistent threads. Switch models mid-flow without losing context.</p>
+    </div>
+    <div class="card">
+      <iconify-icon icon="streamline-flex-color:archive-box"></iconify-icon>
+      <h3>Memory &amp; Artifacts</h3>
+      <p>Local-first storage for memories and reusable artifacts. Attach context with a single <code>@</code> mention.</p>
+    </div>
+    <div class="card">
+      <iconify-icon icon="streamline-flex-color:cloud-data-transfer"></iconify-icon>
+      <h3>Hybrid Model Support</h3>
+      <p>Run local models via Ollama or connect to cloud providers. Per-provider settings let you tailor each model.</p>
+    </div>
+    <div class="card">
+      <iconify-icon icon="streamline-flex-color:script-2"></iconify-icon>
+      <h3>Fast CLI Launcher</h3>
+      <p>Summon Ronin from the terminal. Native performance, zero Electron overhead.</p>
+    </div>
+  </div>
+
+  <p class="section-title">Built with</p>
+  <div class="pills">
+    <span class="pill">Rust</span>
+    <span class="pill green">GPUI</span>
+    <span class="pill">SQLite</span>
+    <span class="pill">Tokio</span>
+    <span class="pill green">Ollama</span>
+    <span class="pill">OpenRouter</span>
+  </div>
+
+  <div class="links">
+    <a href="https://github.com/roninchat/ronin" target="_blank" rel="noopener">
+      <iconify-icon icon="streamline-flex-color:code-monitor-1"></iconify-icon>
+      GitHub
+    </a>
+    <a href="https://github.com/roninchat/ronin/blob/main/LICENSE" target="_blank" rel="noopener">
+      <iconify-icon icon="streamline-flex-color:shield-1"></iconify-icon>
+      GPL-3.0
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  Ronin &middot; a native Linux AI workbench
+</footer>
+
+</body>
+</html>
